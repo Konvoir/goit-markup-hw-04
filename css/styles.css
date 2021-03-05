@@ -1,0 +1,249 @@
+:root {
+  --maintext: #212121;
+  --greytext: #757575;
+  --focus: #2196f3;
+  --herotext: #ffffff;
+  --background-hero: #2f303a;
+  --text-adress: rgba(255, 255, 255, 0.6);
+  --background-button: #f5f4fa;
+  --background-interest: #e5e5e5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding-bottom: 80px;
+  font-family: 'Roboto', sans-serif;
+  color: var(--maintext);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.ctn {
+  width: 1200px;
+  /* outline: 1px solid coral; */
+  margin: 0 auto;
+}
+/*header*/
+
+.main-head {
+  position: sticky;
+  top: -1;
+  min-height: 80px;
+  width: 1200px;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ececec;
+}
+
+.active {
+  font-weight: 500;
+  display: flex;
+  line-height: 1.172;
+  color: var(--maintext);
+}
+
+.pages {
+  display: flex;
+}
+
+.logo {
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.1738;
+  color: var(--focus);
+}
+
+.logoS {
+  color: var(--maintext);
+}
+
+.link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.172;
+  color: inherit;
+}
+
+.adress a {
+  color: var(--greytext);
+}
+
+/* Hower */
+
+a.link:focus,
+a.link:hover {
+  color: var(--focus);
+}
+
+.main-hed,
+.pages,
+.adress {
+  display: flex;
+}
+
+/*herro*/
+
+.herro {
+  padding-top: 200px;
+  max-width: 1600px;
+  height: 400px;
+  background-color: var(--background-hero);
+  color: var(--herotext);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.herro h1 {
+  display: block;
+  font-weight: 900;
+  line-height: 1.1738;
+  font-size: 44px;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.request {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 900;
+  border: #e5e5e5;
+  /* outline: 0; */
+  line-height: 1.875;
+  background-color: var(--focus);
+  color: var(--background-button);
+  width: 200px;
+  height: 50px;
+}
+
+.request:focus,
+.request:hover {
+  background-color: var(--background-button);
+  color: var(--focus);
+}
+
+/*advantages*/
+
+.advantages {
+  max-width: 1200px;
+}
+
+.advantages ul {
+  display: flex;
+}
+
+.advantages h3 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.172;
+  text-transform: uppercase;
+}
+
+.advantages p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.712;
+  color: var(--greytext);
+}
+
+.interest h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.172;
+  text-align: center;
+}
+
+.box {
+  display: flex;
+}
+
+/*teem*/
+
+.teem h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.172;
+  text-align: center;
+}
+
+.teem ul {
+  display: flex;
+}
+
+.teem h3 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.172;
+  text-align: center;
+}
+
+.teem p {
+  color: var(--greytext);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.172;
+  text-align: center;
+}
+
+.client ul {
+  display: flex;
+}
+
+/*footer*/
+
+.foot {
+  max-width: 1200px;
+  background-color: var(--background-hero);
+}
+
+.logo-S {
+  color: var(--herotext);
+}
+
+.contact {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  text-decoration: none;
+  color: var(--herotext);
+  font-style: normal;
+}
+
+a.contact {
+  color: var(--greytext);
+  display: block;
+}
+
+.pages::after {
+  content: "";
+  position: absolute;
+  bottom 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--focus);
+  height: 5px;
+  opacity: 0;
+
+
+}
+
+.pages::after::ho

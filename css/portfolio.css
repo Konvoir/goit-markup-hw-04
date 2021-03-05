@@ -1,0 +1,151 @@
+:root {
+  --logo: #2196f3;
+  --maintext: #212121;
+  --greytext: #757575;
+  --focus: #2196f3;
+  --herotext: #ffffff;
+  --background-hero: #2f303a;
+  --text-adress: rgba(255, 255, 255, 0.6);
+  --background-button: #f5f4fa;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--maintext);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/*header*/
+
+.main-hed {
+  height: 80px;
+  width: 1200px;
+  justify-content: center;
+  align-items: center;
+}
+
+.active {
+  font-weight: 500;
+  display: flex;
+  line-height: 1.172;
+}
+
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.1738;
+  color: var(--logo);
+}
+
+.logoS {
+  color: var(--maintext);
+}
+
+.link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.172;
+  color: var(--maintext);
+}
+
+.pages .link {
+  color: var(--maintext);
+}
+
+.main-hed,
+.pages ul,
+.adress {
+  display: inline-flex;
+}
+
+/* Hower */
+a.link:focus,
+a.link:hover {
+  color: var(--focus);
+}
+
+/*portfolio*/
+
+.container {
+  width: 1200px;
+}
+
+.hidden {
+  display: none;
+}
+
+.button-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  font-size: 16px;
+  line-height: 1.625;
+  background-color: none;
+  color: var(--maintext);
+}
+
+button.button {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.portf-item {
+  display: inline-flex;
+}
+
+.product h3 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  color: var(--maintext);
+}
+
+.product span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1, 85;
+  color: var(--greytext);
+}
+
+/*footer*/
+
+.foot-conteiner {
+  max-width: 1200px;
+  background-color: var(--background-hero);
+}
+
+.logo-S {
+  color: var(--herotext);
+}
+
+.contact {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  font-style: normal;
+  text-decoration: none;
+  color: var(--text-adress);
+}
+
+a.contact {
+  color: var(--greytext);
+  display: block;
+}
