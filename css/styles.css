@@ -3,10 +3,14 @@
   --greytext: #757575;
   --focus: #2196f3;
   --herotext: #ffffff;
+  --background-main: #ffffff;
+  --background-thumb: rgba(33, 150, 243, 0.9);
   --background-hero: #2f303a;
   --text-adress: rgba(255, 255, 255, 0.6);
-  --background-button: #f5f4fa;
+  --background-second: #f5f4fa;
   --background-interest: #e5e5e5;
+  --bazier: cubic-bezier(0.4, 0, 0.2, 1);
+  --card-set-gap: 30px;
 }
 
 *,
@@ -18,9 +22,10 @@
 }
 
 body {
-  padding-bottom: 80px;
+  /* padding-top: 80px; */
   font-family: 'Roboto', sans-serif;
   color: var(--maintext);
+  background-color: var(--background-main);
 }
 
 a {
@@ -33,32 +38,48 @@ ul {
 
 .ctn {
   width: 1200px;
-  /* outline: 1px solid coral; */
   margin: 0 auto;
+  padding: 0 15px;
 }
+
+.no-gap {
+  display: block;
+  max-width: 100%;
+}
+
 /*header*/
 
-.main-head {
+.header {
   position: sticky;
-  top: -1;
+  top: 0;
   min-height: 80px;
-  width: 1200px;
-  margin: 0;
-  justify-content: center;
-  align-items: center;
+  padding: 24 215px;
   border-bottom: 1px solid #ececec;
+  background-color: var(--background-main);
+  z-index: 1;
 }
 
-.active {
+.nav {
   font-weight: 500;
-  display: flex;
+  align-items: center;
   line-height: 1.172;
   color: var(--maintext);
+  vertical-align: middle;
+  justify-content: space-between;
 }
 
-.pages {
-  display: flex;
+.nav-list {
+  margin-left: 93px;
 }
+
+.nav-item:not(:first-child) {
+  margin-left: 50px;
+}
+
+/* padding: 0 200px; */
+/* display: flex; */
+/* .header > .ctn {
+  padding: 0 215px;} */
 
 .logo {
   display: inline-block;
@@ -68,6 +89,8 @@ ul {
   font-weight: 700;
   line-height: 1.1738;
   color: var(--focus);
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 
 .logoS {
@@ -81,8 +104,18 @@ ul {
   color: inherit;
 }
 
-.adress a {
+/* contact */
+
+.contact {
+  margin-left: auto;
+}
+
+.contact a {
   color: var(--greytext);
+}
+
+.contact li:last-child {
+  margin-left: 30px;
 }
 
 /* Hower */
@@ -92,26 +125,36 @@ a.link:hover {
   color: var(--focus);
 }
 
-.main-hed,
-.pages,
-.adress {
+.header,
+.nav,
+.nav-list,
+.box,
+.features-list,
+.teem-list,
+.contact {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /*herro*/
 
 .herro {
+  margin: 0 auto;
   padding-top: 200px;
+  padding-bottom: 200px;
   max-width: 1600px;
-  height: 400px;
   background-color: var(--background-hero);
-  color: var(--herotext);
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
 }
 
+/* align-items: center;
+  justify-content: space-between; */
+
 .herro h1 {
+  color: var(--herotext);
   display: block;
   font-weight: 900;
   line-height: 1.1738;
@@ -121,48 +164,74 @@ a.link:hover {
   margin-bottom: 30px;
 }
 
-.request {
+.herro-button {
   display: inline-block;
   cursor: pointer;
   border-radius: 4px;
-  font-weight: 900;
-  border: #e5e5e5;
-  /* outline: 0; */
+  font-weight: 700;
+  font-size: 16px;
   line-height: 1.875;
+  letter-spacing: 0.06em;
+  border: 1px solid transparent;
   background-color: var(--focus);
-  color: var(--background-button);
+  color: var(--background-second);
   width: 200px;
   height: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: 1px solid transparent;
 }
 
-.request:focus,
-.request:hover {
-  background-color: var(--background-button);
+.herro-button:focus,
+.herro-button:hover {
+  background-color: var(--background-second);
   color: var(--focus);
 }
 
-/*advantages*/
+/*features*/
 
-.advantages {
-  max-width: 1200px;
+.features {
+  padding: 94px 0;
 }
 
-.advantages ul {
-  display: flex;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
-.advantages h3 {
+.features-item:not(:last-of-type) {
+  margin-right: 30px;
+}
+
+.features h3 {
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.172;
+  line-height: 1.142;
   text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
-.advantages p {
+.features p {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.712;
   color: var(--greytext);
+}
+
+/* interest */
+
+.interest {
+  padding-bottom: 94px;
 }
 
 .interest h2 {
@@ -173,20 +242,31 @@ a.link:hover {
 }
 
 .box {
-  display: flex;
+  margin-top: 50px;
+}
+
+.box img {
+  display: block;
 }
 
 /*teem*/
+
+.teem {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: var(--background-second);
+}
 
 .teem h2 {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.172;
   text-align: center;
+  margin-bottom: 50px;
 }
 
-.teem ul {
-  display: flex;
+.team-card {
+  padding: 30px 0;
 }
 
 .teem h3 {
@@ -194,6 +274,7 @@ a.link:hover {
   font-size: 16px;
   line-height: 1.172;
   text-align: center;
+  padding-bottom: 10px;
 }
 
 .teem p {
@@ -204,6 +285,19 @@ a.link:hover {
   text-align: center;
 }
 
+.teem-item {
+  box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 12%),
+    0px 2px 1px rgb(0 0 0 / 22%);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.teem-item:hover,
+.teem-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  outline: none;
+}
+
 .client ul {
   display: flex;
 }
@@ -211,7 +305,7 @@ a.link:hover {
 /*footer*/
 
 .foot {
-  max-width: 1200px;
+  padding: 60px;
   background-color: var(--background-hero);
 }
 
@@ -219,7 +313,7 @@ a.link:hover {
   color: var(--herotext);
 }
 
-.contact {
+.adress {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.714;
@@ -228,22 +322,43 @@ a.link:hover {
   font-style: normal;
 }
 
-a.contact {
+a.adress {
   color: var(--greytext);
   display: block;
+  margin-top: 9px;
 }
 
-.pages::after {
-  content: "";
+.nav-list::after {
+  content: '';
   position: absolute;
-  bottom 0;
+  /* buttom 0; */
   left: 0;
   width: 100%;
   background-color: var(--focus);
   height: 5px;
   opacity: 0;
-
-
 }
 
-.pages::after::ho
+/* h2 - section title */
+
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.bottom {
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+/* section {
+  outline: rebeccapurple 1px dashed;
+}
+
+li {
+  outline: royalblue 1px dashed;
+} */
