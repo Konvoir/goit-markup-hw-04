@@ -21,8 +21,9 @@
   padding: 0;
 }
 
+/* padding-top: 80px; */
+
 body {
-  /* padding-top: 80px; */
   font-family: 'Roboto', sans-serif;
   color: var(--maintext);
   background-color: var(--background-main);
@@ -118,10 +119,21 @@ ul {
   margin-left: 30px;
 }
 
+.contact-icon {
+  margin-right: 10px;
+  text-align: center;
+  fill: currentColor;
+}
+
 /* Hower */
 
 a.link:focus,
 a.link:hover {
+  color: var(--focus);
+}
+
+a.link:focus::before,
+a.link:hover::before {
   color: var(--focus);
 }
 
@@ -145,6 +157,12 @@ a.link:hover {
   padding-bottom: 200px;
   max-width: 1600px;
   background-color: var(--background-hero);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/bgr.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
@@ -178,7 +196,6 @@ a.link:hover {
   width: 200px;
   height: 50px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border: 1px solid transparent;
 }
 
 .herro-button:focus,
@@ -228,6 +245,15 @@ a.link:hover {
   color: var(--greytext);
 }
 
+.thumb-features {
+  width: 270px;
+  height: 120px;
+  background-color: var(--background-second);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* interest */
 
 .interest {
@@ -245,8 +271,18 @@ a.link:hover {
   margin-top: 50px;
 }
 
-.box img {
+/* .box img { display: block;} */
+
+.thumb-interest {
+  width: 370px;
+  height: 294px;
+}
+
+.thumb-interest > img {
   display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 /*teem*/
@@ -298,9 +334,15 @@ a.link:hover {
   outline: none;
 }
 
-.client ul {
+.teamate-networks {
+  margin-top: 16px;
   display: flex;
+  justify-content: space-evenly;  
+  text-align: center;
 }
+
+/* CLIENT*S  in portf. file */
+
 
 /*footer*/
 

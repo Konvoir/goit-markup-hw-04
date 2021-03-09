@@ -25,6 +25,7 @@
   display: block;
   max-width: 100%;
 }
+
 /* body {padding-top: 80px;} */
 
 body {
@@ -42,7 +43,7 @@ ul {
 }
 
 .ctn {
-  /* outline: 1px solid coral; */
+  outline: 1px solid coral;
   width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
@@ -115,6 +116,10 @@ ul {
   color: var(--greytext);
 }
 
+/* .contact a::before {
+  background-image: url(../images/symbol-defs.svg);
+} */
+
 .contact li:last-child {
   margin-left: 30px;
 }
@@ -183,7 +188,7 @@ a.link:hover {
   padding: 6px 22px;
   border-radius: 4px;
   transition: color 250ms var(--bazier), background-color 250ms var(--bazier),
-    box-shadow 250ms var(--bazier);
+  box-shadow: 250ms var(--bazier);
   cursor: pointer;
 }
 
@@ -239,6 +244,47 @@ a.link:hover {
   letter-spacing: 0.06em;
 }
 
+/* CLIENT*S */
+
+.client .title{
+margin-bottom: 50px;
+}
+
+.client ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  outline: var(--focus) 1px dashed;
+}
+
+.client li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: coral 1px dashed;
+  width: 170px;
+  height: 90px;
+  border: var(--greytext) 1px solid;
+  border-radius: 4px;
+  /* position: centre; */
+  }
+
+  .clinets-item:hover,
+  .clinets-item:focus {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    outline: none;
+  }
+  
+  .client-icon {
+    fill: currentColor;
+  }
+/* 
+  .client-item:hover { 
+    background-color: var(--focus);
+    fill: var(--focus);
+   } */
+
 /*footer*/
 
 .foot {
@@ -268,6 +314,7 @@ a.adress {
 .nav-list::after {
   content: '';
   position: absolute;
+
   /* buttom 0; */
   left: 0;
   width: 100%;
