@@ -341,6 +341,13 @@ a.link:hover::before {
   text-align: center;
 }
 
+.teamate-network-item:hover
+.teamate-network-item:focus {
+  fill:var(--focus);
+  background-color: var(--focus);
+}
+
+
 /* CLIENT*S  in portf. file */
 
 
