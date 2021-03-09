@@ -43,7 +43,7 @@ ul {
 }
 
 .ctn {
-  outline: 1px solid coral;
+  /* outline: 1px solid coral; */
   width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
@@ -254,14 +254,14 @@ margin-bottom: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  outline: var(--focus) 1px dashed;
+  /* outline: var(--focus) 1px dashed; */
 }
 
 .client li {
   display: flex;
   align-items: center;
   justify-content: center;
-  outline: coral 1px dashed;
+  /* outline: coral 1px dashed; */
   width: 170px;
   height: 90px;
   border: var(--greytext) 1px solid;
@@ -269,16 +269,23 @@ margin-bottom: 50px;
   /* position: centre; */
   }
 
-  .clinets-item:hover,
-  .clinets-item:focus {
-    border-color: var(--accent-color);
-    color: var(--accent-color);
+  .client-item:hover,
+  .client-item:focus {
+    border-color: var(--focus);
+    color: var(--focus);
+    fill: var(--focus);
+    /* background-color: var(--focus); */
     outline: none;
   }
   
   .client-icon {
     fill: currentColor;
   }
+
+  /* .client-item:hover .client-icon,
+  .client-item:focus .client-icon {
+    fill: var(--focus);
+  } */
 /* 
   .client-item:hover { 
     background-color: var(--focus);
