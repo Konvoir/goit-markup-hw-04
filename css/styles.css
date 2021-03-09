@@ -343,7 +343,7 @@ a.link:hover::before {
 
 .teamate-network-item:hover
 .teamate-network-item:focus {
-  fill:var(--focus);
+  fill: var(--focus);
   background-color: var(--focus);
 }
 
