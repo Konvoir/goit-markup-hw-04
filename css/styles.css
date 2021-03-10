@@ -1,6 +1,7 @@
 :root {
   --maintext: #212121;
   --greytext: #757575;
+  --greytext-second: #AFB1B8;
   --focus: #2196f3;
   --herotext: #ffffff;
   --background-main: #ffffff;
@@ -38,6 +39,7 @@ ul {
 }
 
 .ctn {
+  outline: 1px solid coral;
   width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
@@ -125,12 +127,18 @@ ul {
   fill: currentColor;
 }
 
-/* Hower */
 
 a.link:focus,
 a.link:hover {
   color: var(--focus);
 }
+
+/* Hower */
+
+/* a.link:focus .contact-icon,
+a.link:hover .contact-icon {
+  fill: var(--focus);
+} */
 
 a.link:focus::before,
 a.link:hover::before {
@@ -303,6 +311,8 @@ a.link:hover::before {
 
 .team-card {
   padding: 30px 0;
+  background-color:var(--background-main);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .teem h3 {
@@ -327,6 +337,10 @@ a.link:hover::before {
   border-radius: 0px 0px 4px 4px;
 }
 
+.teem-item img {
+  display: block;
+}
+
 .teem-item:hover,
 .teem-item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -339,20 +353,96 @@ a.link:hover::before {
   display: flex;
   justify-content: space-evenly;  
   text-align: center;
+  color: var(--greytext);
 }
 
-.teamate-network-item:hover
-.teamate-network-item:focus {
+.teamate-network-link {
+  color: #757575;
+  object-fit: cover;
+  border-radius: 50%;
+
+  width: 44px;
+  height: 44px;
+}
+
+.teamate-network-link:hover,
+.teamate-network-link:focus {
+  color: var(--focus);
+
+  /* background-color: var(--focus); */
+  /* fill: darkmagenta; */
+}
+
+.network-icon {
+  fill: currentColor;
+}
+
+/* CLIENT*S */
+
+.client {
+  padding: 94px 0;
+}
+
+.client .title{
+  margin-bottom: 50px;
+}
+  
+.client ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* outline: var(--focus) 1px dashed; */
+}
+  
+.client li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 90px;
+  border: var(--greytext) 1px solid;
+  border-radius: 4px;
+  color: #757575;
+  
+  /* position: centre; */
+}
+  
+
+.client-item:hover .client-icon,
+.client-item:focus .client-icon {
+  border-color: var(--focus);
+  color: var(--focus);
   fill: var(--focus);
-  background-color: var(--focus);
+  /* background-color: var(--focus); */
+  outline: none;
 }
 
+.client-item a {
+  color:var(--greytext-second);
+}
+   
+.client-item:hover,
+.client-item:focus {
+  border-color: var(--focus);
+  outline: none;
+}
 
-/* CLIENT*S  in portf. file */
+.client-icon {
+  fill: currentColor;
+}
 
-
+/* .client-item:hover .client-icon,
+.client-item:focus .client-icon {
+  fill: var(--focus);
+} */
+/* 
+.client-item:hover { 
+  background-color: var(--focus);
+  fill: var(--focus);
+ } */
+  
 /*footer*/
-
+  
 .foot {
   padding: 60px;
   background-color: var(--background-hero);
@@ -380,6 +470,7 @@ a.adress {
 .nav-list::after {
   content: '';
   position: absolute;
+
   /* buttom 0; */
   left: 0;
   width: 100%;
@@ -404,10 +495,51 @@ a.adress {
   margin-bottom: 20px;
 }
 
-/* section {
-  outline: rebeccapurple 1px dashed;
+.thumb {
+  position: relative;
+  overflow: hidden;
 }
 
-li {
-  outline: royalblue 1px dashed;
-} */
+.example-link:hover,
+.example-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  outline: none;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  transform: translateY(100%);
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transition: transform 250ms var(--bazier);
+}
+
+.example-link:hover .overlay,
+.example-link:focus .overlay {
+  transform: translateY(0);
+}
+
+.overlay-text {
+  margin: 0;
+  padding: 63px 20px;
+
+  color: var(--background-main);
+  font-size: 18px;
+  line-height: 1.56;
+}
+  
+  /* section {
+    outline: rebeccapurple 1px dashed;
+  }
+  
+  li {
+    outline: royalblue 1px dashed;
+  } */
+  
