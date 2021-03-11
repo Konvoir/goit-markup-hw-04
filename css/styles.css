@@ -40,7 +40,9 @@ ul {
 }
 
 .ctn {
-  outline: 1px solid coral;
+  
+  /* outline: 1px solid coral; */
+
   width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
@@ -354,7 +356,8 @@ a.link:hover::before {
 
 .teamate-network-link {
   display: inline-flex;
-  outline: coral 1px solid;
+
+  /* outline: coral 1px solid; */
   color: var(--greytext-second);
   object-fit: contain;
   border-radius: 50%;
@@ -457,6 +460,12 @@ a.link:hover::before {
 .foot {
   padding: 60px;
   background-color: var(--background-hero);
+  
+}
+
+.foot > .ctn {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .logo-S {
@@ -476,6 +485,31 @@ a.adress {
   color: var(--greytext);
   display: block;
   margin-top: 9px;
+}
+
+.social-links {
+  margin-left: 86px;
+  align-items: baseline;
+}
+
+.social-links .teamate-network-link {
+background: rgba(255, 255, 255, 0.1);
+}
+
+.social-links-text {
+  font-family: Roboto, sans-serif;
+  width: 700;
+  size: 14px;
+  line-height: 1.172;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;  
+  color: var(--background-main);
+}
+
+.foot .teamate-network-link:hover,
+.foot .teamate-network-link:focus {
+  color: var(--background-main);
+  background-color: var(--focus);
 }
 
 .nav-list::after {
