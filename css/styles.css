@@ -20,7 +20,10 @@
   box-sizing: inherit;
   margin: 0;
   padding: 0;
+  
 }
+
+
 
 /* padding-top: 80px; */
 
@@ -125,6 +128,15 @@ ul {
   fill: currentColor;
 }
 
+* {
+  transform: scale(0.97);
+  }
+
+*:focus,
+*:hover {
+transform: scale(1.15);
+z-index: 1;
+}
 
 a.link:focus,
 a.link:hover {
@@ -558,14 +570,15 @@ background: rgba(255, 255, 255, 0.1);
   bottom: 0;
   left: 0;
 
-  transform: translateY(100%);
+  transform: translateY(101%);
 
   width: 100%;
   height: 100%;
-  background-color: rgba(33, 150, 243, 0.9);
+  background-color: var(--background-thumb);
 
   transition: transform 250ms var(--bazier);
 }
+
 
 .example-link:hover .overlay,
 .example-link:focus .overlay {
@@ -574,11 +587,12 @@ background: rgba(255, 255, 255, 0.1);
 
 .overlay-text {
   margin: 0;
-  padding: 63px 20px;
+  padding: 63px 24px;
 
   color: var(--background-main);
   font-size: 18px;
   line-height: 1.56;
+
 }
   
   /* section {
